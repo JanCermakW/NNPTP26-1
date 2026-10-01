@@ -38,8 +38,9 @@ TestResults/
 # Visual Studio 2015
 .vs/
 
-INPTPZ1/bin/
-INPTPZ1/obj/
-INPTPZ1Tests/bin/
-INPTPZ1Tests/obj/
+[Bb]in/
+[Oo]bj/
+
+# Generated fractal image
+out.png
 packages/

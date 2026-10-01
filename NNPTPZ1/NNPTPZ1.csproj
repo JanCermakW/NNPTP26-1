@@ -44,6 +44,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Mathematics\ComplexNumber.cs" />
+    <Compile Include="Mathematics\Polynomial.cs" />
+    <Compile Include="NewtonFractal\FractalColorizer.cs" />
+    <Compile Include="NewtonFractal\FractalSettings.cs" />
+    <Compile Include="NewtonFractal\FractalSettingsParser.cs" />
+    <Compile Include="NewtonFractal\NewtonFractalRenderer.cs" />
+    <Compile Include="NewtonFractal\NewtonResult.cs" />
+    <Compile Include="NewtonFractal\NewtonSolver.cs" />
+    <Compile Include="NewtonFractal\RootRegistry.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
