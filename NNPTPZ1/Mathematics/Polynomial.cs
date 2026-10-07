@@ -13,6 +13,8 @@ namespace NNPTPZ1.Mathematics
     {
         private readonly IReadOnlyList<ComplexNumber> coefficients;
 
+        public IReadOnlyList<ComplexNumber> Coefficients => coefficients;
+
         public Polynomial(params ComplexNumber[] coefficients)
             : this((IEnumerable<ComplexNumber>)coefficients)
         {
@@ -27,8 +29,6 @@ namespace NNPTPZ1.Mathematics
 
             this.coefficients = coefficients.ToList().AsReadOnly();
         }
-
-        public IReadOnlyList<ComplexNumber> Coefficients => coefficients;
 
         public Polynomial Derive()
         {

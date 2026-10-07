@@ -10,6 +10,24 @@ namespace NNPTPZ1.NewtonFractal
     {
         public const string DefaultOutputPath = "../../../out.png";
 
+        public int Width { get; }
+
+        public int Height { get; }
+
+        public double XMin { get; }
+
+        public double XMax { get; }
+
+        public double YMin { get; }
+
+        public double YMax { get; }
+
+        public string OutputPath { get; }
+
+        public double XStep => (XMax - XMin) / Width;
+
+        public double YStep => (YMax - YMin) / Height;
+
         public FractalSettings(
             int width, int height, double xMin, double xMax, double yMin, double yMax, string outputPath)
         {
@@ -46,24 +64,6 @@ namespace NNPTPZ1.NewtonFractal
             YMax = yMax;
             OutputPath = string.IsNullOrWhiteSpace(outputPath) ? DefaultOutputPath : outputPath;
         }
-
-        public int Width { get; }
-
-        public int Height { get; }
-
-        public double XMin { get; }
-
-        public double XMax { get; }
-
-        public double YMin { get; }
-
-        public double YMax { get; }
-
-        public string OutputPath { get; }
-
-        public double XStep => (XMax - XMin) / Width;
-
-        public double YStep => (YMax - YMin) / Height;
 
         /// <summary>
         /// Maps a pixel of the image to the point of the complex plane.

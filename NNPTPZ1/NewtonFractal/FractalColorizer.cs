@@ -8,9 +8,9 @@ namespace NNPTPZ1.NewtonFractal
     /// </summary>
     public static class FractalColorizer
     {
-        public static readonly Color NotConvergedColor = Color.Black;
-
         private const int DarkeningPerIteration = 2;
+
+        public static readonly Color NotConvergedColor = Color.Black;
 
         private static readonly Color[] Palette =
         {

@@ -14,14 +14,14 @@ namespace NNPTPZ1.NewtonFractal
         private readonly NewtonSolver solver;
         private readonly RootRegistry rootRegistry = new RootRegistry();
 
+        /// <summary>Distinct roots found while computing the pixels so far.</summary>
+        public IReadOnlyList<ComplexNumber> FoundRoots => rootRegistry.Roots;
+
         public NewtonFractalRenderer(FractalSettings settings, Polynomial polynomial)
         {
             this.settings = settings ?? throw new ArgumentNullException(nameof(settings));
             solver = new NewtonSolver(polynomial);
         }
-
-        /// <summary>Distinct roots found while computing the pixels so far.</summary>
-        public IReadOnlyList<ComplexNumber> FoundRoots => rootRegistry.Roots;
 
         /// <summary>
         /// Computes the color of a pixel. Roots get their colors in the order in which they are found,

@@ -13,12 +13,12 @@ namespace NNPTPZ1.NewtonFractal
 
         private readonly List<ComplexNumber> roots = new List<ComplexNumber>();
 
+        public IReadOnlyList<ComplexNumber> Roots { get; }
+
         public RootRegistry()
         {
             Roots = roots.AsReadOnly();
         }
-
-        public IReadOnlyList<ComplexNumber> Roots { get; }
 
         /// <summary>
         /// Returns the index of an already known root close to <paramref name="root"/>,

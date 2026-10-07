@@ -10,17 +10,17 @@ namespace NNPTPZ1.Mathematics
     {
         public static readonly ComplexNumber Zero = new ComplexNumber(0, 0);
 
-        public ComplexNumber(double realPart, double imaginaryPart)
-        {
-            RealPart = realPart;
-            ImaginaryPart = imaginaryPart;
-        }
-
         public double RealPart { get; }
 
         public double ImaginaryPart { get; }
 
         public bool IsNaN => double.IsNaN(RealPart) || double.IsNaN(ImaginaryPart);
+
+        public ComplexNumber(double realPart, double imaginaryPart)
+        {
+            RealPart = realPart;
+            ImaginaryPart = imaginaryPart;
+        }
 
         public ComplexNumber Add(ComplexNumber other)
         {
